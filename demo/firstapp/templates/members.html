@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block content %}
+<h1>Members</h1>
+<ul>
+    {% for member in members %}
+        <li>{{ member.firstname}} {{member.lastname}} is a member</li>
+    {% endfor %}
+</ul>
+{% endblock %}
