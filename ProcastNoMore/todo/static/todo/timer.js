@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   let timerDisplay = document.getElementById('timer-display');
   let startStopButton = document.getElementById('start-stop');
+  let resetButton = docuemnt.getElementById('reset');
   let timerDuration = 0;
   let timer;
   let isRunning = false;
@@ -21,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
           startTimer();
       }
+  });
+
+  resetButton.addEventListener('click', function() {
+        resetTimer();
   });
 
   function startTimer() {
@@ -43,6 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
       isRunning = false;
       startStopButton.textContent = 'Start';
   }
+
+  function resetTimer(){
+     timerDuration = 0;
+     isRunning = false;
+  } 
 
   function updateDisplay(seconds) {
       let minutes = Math.floor(seconds / 60);
