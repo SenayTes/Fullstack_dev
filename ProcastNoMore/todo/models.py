@@ -15,3 +15,11 @@ class Task(models.Model):
 
     class Meta:
         ordering = ['complete']
+
+class Track(models.Model):
+    title = models.CharField(max_length=255)
+    artist = models.CharField(max_length=255)
+    music_file = models.FileField(upload_to='music/')
+    
+    def __str__(self):
+        return self.title

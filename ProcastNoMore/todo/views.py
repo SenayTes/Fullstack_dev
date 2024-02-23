@@ -10,6 +10,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
 from .models import Task
+from .models import Track
 
 # Create your views here.
 
@@ -37,9 +38,6 @@ class RegisterPage(FormView):
         if self.request.user.is_authenticated:
             return redirect('tasks')
         return super(RegisterPage, self).get(*args, **kwargs)
-
-    
-
 
 class TaskList(LoginRequiredMixin, ListView):
     model = Task
@@ -80,4 +78,8 @@ class TaskDelete(LoginRequiredMixin, DeleteView):
     model = Task
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
+
+class TrackList(LoginRequiredMixin, ListView):
+    model = Track
+    context_object_name = 'tracks'
 

@@ -48,6 +48,7 @@
             {% endfor %}
         </div>
     </div>
+
     <div class="timer-container">
         <div id="timer-display">00:00</div>
         <button class="time-setter" data-time="15">15 Min</button>
@@ -59,8 +60,22 @@
         <button id="reset">Reset</button>
     </div>
     </div>
+
+    <div class="music-player">
+        <h2 > Music tracks</h2>
+        {% if track %}
+        <ul>
+            {% for track in tracks %}
+                <li>{{ track.title }} - {{ track.artist }}</li>
+            {% endfor %}   
+        </ul>              
+        {% else %}
+        <p>No tracks available</p>
+        {% endif %}
+    </div>
 </div>
 
-<script src="{% static 'todo/timer.js' %}"></script>
+{% comment %} 
+<script src="{% static 'todo/timer.js' %}"></script> {% endcomment %}
 
 {% endblock content%}

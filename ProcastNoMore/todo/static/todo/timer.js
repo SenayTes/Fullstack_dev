@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
             timerDuration--;
             // Update the displayed time
             updateDisplay(timerDuration);
+            
+            // Storing the value of current value of the timer
+            sessionStorage.setItem('leftDuration',timerDuration)
   
             // If the timer reaches 0, stop the timer and show an alert
             if (timerDuration <= 0) {
