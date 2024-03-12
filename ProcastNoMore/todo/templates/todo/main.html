@@ -11,10 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{% static 'todo/style.css' %}" />
-    <script src="{% static 'todo/timer.js' %}"></script>
-
-    <title>To Do List</title>
+    <link rel="stylesheet" href="{% static 'todo/css/style.css' %}" />
+    <script src="{% static 'todo/javascript/timer.js' %}"></script>
+    
+    <title>ProcastNoMore</title>
     <style>
       body {
         background: linear-gradient(
@@ -174,7 +174,7 @@
       .timer-container {
         max-width: 550px;
         margin: auto;
-        margin-top: 0px;
+        margin-top: 30px;
         background: hsla(10, 82%, 65%, 1);
 
         background: linear-gradient(
@@ -204,6 +204,7 @@
         margin: auto;
         margin-top: 0px;
         background: hsla(10, 82%, 65%, 1);
+        display: none;
 
         background: linear-gradient(
           90deg,
