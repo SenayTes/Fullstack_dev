@@ -70,6 +70,21 @@
             {% empty %}
                 <h3>No tracks available</h3>
             {% endfor %}
+
+            {% comment %}
+            <div class="music-player"> 
+                <h2>Available Tracks</h2>
+                <ul>
+                    {% for track in tracks %}
+                        <li>
+                            {{ track.title }} - {{ track.artist }}
+                        </li>
+                    {% empty %}
+                        <h3>No tracks available</h3>
+                    {% endfor %}
+                </ul>              
+            </div>
+            {% endcomment %}
         </ul>              
     </div>
 </div>
